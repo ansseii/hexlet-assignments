@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class BulletinsTest < ActionDispatch::IntegrationTest
+class BulletinsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @bulletin = bulletins(:one)
   end

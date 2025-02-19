@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class BulletinsTest < ActionDispatch::IntegrationTest
-
   setup do
     @bulletin = bulletins(:one)
   end

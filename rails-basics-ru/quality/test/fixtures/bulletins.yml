@@ -1,0 +1,11 @@
+one:
+  id: 1
+  title: 'Test title 1'
+  body: ' This is a body for test bulletin 1'
+  published: true
+
+two:
+  id: 2
+  title: 'Test title 2'
+  body: ' This is a body for test bulletin 2'
+  published: true

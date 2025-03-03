@@ -1,0 +1,27 @@
+p
+  strong Name:
+  = @task.name
+
+p
+  strong Description:
+  = @task.description
+
+p
+  strong Status:
+  = @task.status
+
+p
+  strong Creator:
+  = @task.creator
+
+p
+  strong Performer:
+  = @task.performer
+
+p
+  strong Completed:
+  = @task.completed
+
+= link_to t('edit'), edit_task_path(@task)
+| |
+= link_to t('back'), tasks_path

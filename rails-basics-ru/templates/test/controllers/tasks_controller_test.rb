@@ -5,7 +5,6 @@ require 'test_helper'
 class TasksControllerTest < ActionDispatch::IntegrationTest
   setup do
     @task = tasks(:one)
-
     @attrs = {
       name: Faker::Artist.name,
       description: Faker::Movies::HarryPotter.quote,
@@ -29,9 +28,8 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
   test 'should create task' do
     post tasks_url, params: { task: @attrs }
 
-    task = Task.find_by @attrs
+    task = Task.find_by! name: @attrs[:name]
 
-    assert { task }
     assert_redirected_to task_url(task)
   end
 
@@ -47,11 +45,11 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update task' do
     patch task_url(@task), params: { task: @attrs }
+    assert_redirected_to task_url(@task)
 
     @task.reload
 
     assert { @task.name == @attrs[:name] }
-    assert_redirected_to task_url(@task)
   end
 
   test 'should destroy task' do

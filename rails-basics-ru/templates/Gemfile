@@ -3,9 +3,15 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'rails', '~> 7.0'
+
+# BEGIN
+gem 'slim-rails'
+# END
+
+gem 'jbuilder'
 gem 'puma'
-gem 'rails', '~> 7.2'
-gem 'sqlite3', '~> 1.4'
+gem 'sqlite3'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -22,27 +28,24 @@ gem 'stimulus-rails'
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem 'cssbundling-rails'
 
+gem 'rexml', '~> 3.2', '>= 3.2.4'
+
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'jbuilder'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'faker'
-  gem 'slim-rails'
 end
 
 group :development do
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
-  gem 'rubocop'
+  gem 'spring'
   gem 'web-console', '>= 4.1.0'
-  # gem 'spring'
 end
 
 group :test do
+  gem 'faker'
   gem 'minitest-power_assert'
 end
 
-gem 'rexml', '~> 3.2', '>= 3.2.4'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

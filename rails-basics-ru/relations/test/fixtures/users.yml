@@ -1,0 +1,10 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# BEGIN
+John Doe:
+  id: 1
+  name: John Doe
+
+Foo Bar:
+  id: 2
+  name: Foo Bar
+# END
